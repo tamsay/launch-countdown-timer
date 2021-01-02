@@ -16,7 +16,7 @@ body{
     flex-direction: column;
     background-color: #211d2b;
     background-image: url(../assets/images/bg-stars.svg), url(../assets/images/pattern-hills.svg) ;
-    background-position: center -75%, center bottom;
+    background-position: center 0%, center bottom;
     background-repeat: no-repeat;
     height: 100vh;
     max-width: 1440px;
@@ -36,44 +36,75 @@ body{
 li{
     list-style-type: none;
 }
-.attribution { 
-    font-size: 14px; 
-    text-align: center; 
-    color: hsl(0, 0%, 100%);
-}
-.attribution a { 
-    /* color: hsl(228, 45%, 44%);  */
-    color: hsl(345, 95%, 68%);
-}
-
-
 
 #page-header{
-    height: 15%;
+    height: 20%;
     color: hsl(0, 0%, 100%);
+    align-items: flex-end;
+}
+
+#page-header h3{
+    letter-spacing: 0.25em;
 }
 
 
 #main-content{
-    height: 65%;
+    height: 60%;
     justify-content: center;
+    padding: 0em 0em 5em 0em;
+    flex-wrap: nowrap;
 }
 
 #main-content .card-wrapper{
-    width: 7.5%;
-    margin: 0em 2em;
+    min-width: 10em;
+    margin: 0em 2.5em;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* background-color: transparent; */
+    position: relative;
+    z-index: 1;
+
 }
 
-#main-content .count-value{
+#main-content .card{
+    padding: 0%;
+    background-color: hsl(236, 21%, 26%);
+    border-radius: 10px;
+    position: relative;
+    border: none;
+    width: 100%;
+    display: flex;
+    min-height: 10em;
+    justify-content: center;
+}
+#main-content .card .spinner{
+    width: 75%;
+}
+#main-content .card .value-holder{
+    padding: 0em 0.125em;
+    margin: 0;
     font-size: 5em;
     color: hsl(345, 95%, 68%);
-    font-weight: 700;
-    padding: 0.125em 0.25em;
-    background-color: hsl(236, 21%, 26%);
+    font-weight: bolder;
+    text-align: center;
+}
+
+#main-content .card::before{
+    content: "";
+}
+
+#main-content .card::after{
+    content: "";
+    font-size: 1em;
+    background-color: hsl(234, 17%, 12%);
+    height: 100%;
+    /* height: calc(100% - 50px); */
+    width: 100%;
+    position: absolute;
+    bottom: -0.875em;
+    border-radius: 0 0 10px 10px;
+    border: none;
+    z-index: -1;
 }
 
 #main-content .card-details{
@@ -92,8 +123,12 @@ li{
     left: 0;
     bottom: 0;
     width: 100%;
-    padding-bottom: 0.25em;
+    padding-bottom: 2em;
     height: 20%;
+    justify-content: flex-end;
+}
+.footer .social-icons{
+    margin-bottom: 1em;
 }
 .footer li{
     margin: 0em 1em;
@@ -105,4 +140,15 @@ li{
 .footer i{
     color: hsl(237, 18%, 59%);
     font-size: 1.75em;
+}
+
+.footer .attribution { 
+    font-size: 14px; 
+    text-align: center; 
+    color: hsl(0, 0%, 100%);
+    margin: 0;
+}
+.footer .attribution a { 
+    /* color: hsl(228, 45%, 44%);  */
+    color: hsl(345, 95%, 68%);
 }
