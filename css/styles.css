@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text&display=swap');
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    font-family: 'Red Hat Text', sans-serif;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    background-color: #211d2b;
+    background-image: url(../assets/images/bg-stars.svg), url(../assets/images/pattern-hills.svg) ;
+    background-position: center -75%, center bottom;
+    background-repeat: no-repeat;
+    height: 100vh;
+    max-width: 1440px;
+    width: 100%;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+li{
+    list-style-type: none;
+}
+.attribution { 
+    font-size: 14px; 
+    text-align: center; 
+    color: hsl(0, 0%, 100%);
+}
+.attribution a { 
+    /* color: hsl(228, 45%, 44%);  */
+    color: hsl(345, 95%, 68%);
+}
+
+
+
+#page-header{
+    height: 15%;
+    color: hsl(0, 0%, 100%);
+}
+
+
+#main-content{
+    height: 65%;
+    justify-content: center;
+}
+
+#main-content .card-wrapper{
+    width: 7.5%;
+    margin: 0em 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: transparent; */
+}
+
+#main-content .count-value{
+    font-size: 5em;
+    color: hsl(345, 95%, 68%);
+    font-weight: 700;
+    padding: 0.125em 0.25em;
+    background-color: hsl(236, 21%, 26%);
+}
+
+#main-content .card-details{
+    font-size: 0.875em;
+    color: hsl(237, 18%, 59%);
+    font-weight: 700;
+    margin-top: 2em;
+    letter-spacing: 0.5em;
+}
+
+
+
+.footer{
+    background-color: transparent;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 0.25em;
+    height: 20%;
+}
+.footer li{
+    margin: 0em 1em;
+}
+.footer i:hover{
+    cursor: pointer;
+    color: hsl(345, 95%, 68%);
+}
+.footer i{
+    color: hsl(237, 18%, 59%);
+    font-size: 1.75em;
+}
